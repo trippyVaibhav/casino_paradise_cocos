@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "roller",
+    "texture": "771853d3-e861-47ed-ae2b-4bdb28e99475",
+    "atlas": "5cb4ec0c-64b3-4f60-bbb0-53f03b877419",
+    "rect": [
+      617,
+      549,
+      1082,
+      664
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      1082,
+      664
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

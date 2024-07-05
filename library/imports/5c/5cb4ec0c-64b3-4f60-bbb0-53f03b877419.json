@@ -1,0 +1,29 @@
+{
+  "__type__": "cc.SpriteAtlas",
+  "_name": "loginScreen.plist",
+  "_objFlags": 0,
+  "_native": "",
+  "_spriteFrames": {
+    "checkboxboundry": {
+      "__uuid__": "10978f42-f88d-4ce1-854f-88c89aab728b"
+    },
+    "dollarSprite": {
+      "__uuid__": "e88c3440-21c1-44ce-8c04-9192529ea44c"
+    },
+    "female": {
+      "__uuid__": "231f597a-9bc6-4464-a4e5-3172252557c3"
+    },
+    "inputboxBoundry": {
+      "__uuid__": "97452885-8730-4f0f-ad84-af1aa1994d75"
+    },
+    "loginbutton": {
+      "__uuid__": "b045fff3-bf46-4a96-bf2c-249dde0226bc"
+    },
+    "roller": {
+      "__uuid__": "5eb920c6-6a75-4abe-bac2-acf259107448"
+    },
+    "tick": {
+      "__uuid__": "49ca4030-c77d-4ee8-a690-bca242c1a2f7"
+    }
+  }
+}

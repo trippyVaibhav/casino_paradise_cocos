@@ -1,0 +1,11 @@
+{
+  "__type__": "cc.SpriteAtlas",
+  "_name": "LoginBg.plist",
+  "_objFlags": 0,
+  "_native": "",
+  "_spriteFrames": {
+    "loginbg": {
+      "__uuid__": "c367399b-6e01-47ae-b065-8675dc604b37"
+    }
+  }
+}

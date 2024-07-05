@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "dollarSprite",
+    "texture": "771853d3-e861-47ed-ae2b-4bdb28e99475",
+    "atlas": "5cb4ec0c-64b3-4f60-bbb0-53f03b877419",
+    "rect": [
+      457,
+      0,
+      504,
+      549
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      504,
+      549
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

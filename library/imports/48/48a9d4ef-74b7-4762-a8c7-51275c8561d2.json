@@ -1,0 +1,11 @@
+{
+  "__type__": "cc.SpriteAtlas",
+  "_name": "LobbyBg.plist",
+  "_objFlags": 0,
+  "_native": "",
+  "_spriteFrames": {
+    "LobbyBg": {
+      "__uuid__": "3f094eef-1f9f-4b5c-b652-80fca525c653"
+    }
+  }
+}

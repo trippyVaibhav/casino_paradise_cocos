@@ -1,0 +1,36 @@
+{
+  "ver": "1.2.6",
+  "uuid": "da07dd19-28a4-41b2-bddb-5539e1e1e1fe",
+  "importer": "asset",
+  "rawTextureUuid": "6c21c873-3bba-44e0-9782-2642b6db3133",
+  "size": {
+    "width": 1920,
+    "height": 1080
+  },
+  "type": "Texture Packer",
+  "subMetas": {
+    "loginbg.png": {
+      "ver": "1.0.6",
+      "uuid": "c367399b-6e01-47ae-b065-8675dc604b37",
+      "importer": "sprite-frame",
+      "rawTextureUuid": "6c21c873-3bba-44e0-9782-2642b6db3133",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 1920,
+      "height": 1080,
+      "rawWidth": 1920,
+      "rawHeight": 1080,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "spriteType": "normal",
+      "subMetas": {}
+    }
+  }
+}

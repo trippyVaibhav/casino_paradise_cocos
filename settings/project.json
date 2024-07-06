@@ -1,0 +1,9 @@
+{
+  "migrate-history": [
+    "cloud-function"
+  ],
+  "group-list": [
+    "default"
+  ],
+  "start-scene": "current"
+}

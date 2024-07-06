@@ -1,0 +1,38 @@
+{
+  "ver": "2.3.7",
+  "uuid": "10a2cf29-4cb1-4f3c-b5d2-bd549e1e0933",
+  "importer": "texture",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "genMipmaps": false,
+  "packable": true,
+  "width": 486,
+  "height": 187,
+  "platformSettings": {},
+  "subMetas": {
+    "CasinoLogo": {
+      "ver": "1.0.6",
+      "uuid": "a65f7217-7677-4f87-9b09-b617c41ceb4d",
+      "importer": "sprite-frame",
+      "rawTextureUuid": "10a2cf29-4cb1-4f3c-b5d2-bd549e1e0933",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0.5,
+      "offsetY": 2.5,
+      "trimX": 2,
+      "trimY": 4,
+      "width": 483,
+      "height": 174,
+      "rawWidth": 486,
+      "rawHeight": 187,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

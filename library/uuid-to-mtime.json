@@ -1,89 +1,4 @@
 {
-  "fef106d6-86a3-482e-b769-3e65b1bc5cb7": {
-    "asset": 1720167638675,
-    "meta": 1720170045352,
-    "relativePath": "Scenes"
-  },
-  "a8cc58cf-815d-47f6-b8b8-330f6af854f3": {
-    "asset": 1720183338042,
-    "meta": 1720183338046,
-    "relativePath": "Scenes/login.fire"
-  },
-  "bf475058-8a52-440e-a3c6-6325ee644733": {
-    "asset": 1720170781334,
-    "meta": 1720170781338,
-    "relativePath": "Sprites"
-  },
-  "a0aed82f-c22f-4c5f-bbca-b75df0f42e77": {
-    "asset": 1720171371975,
-    "meta": 1720171371978,
-    "relativePath": "Fonts"
-  },
-  "cdb23e58-31ba-4da0-9b8b-c971cae33aab": {
-    "asset": 1720171382867,
-    "meta": 1720171382873,
-    "relativePath": "Scripts"
-  },
-  "36eb698e-15e7-46dd-8ab6-207355f0d946": {
-    "asset": 1720172274982,
-    "meta": 1720172310472,
-    "relativePath": "Scripts/login"
-  },
-  "2eb808c4-54b0-4c30-8a57-b53c20d2b9d3": {
-    "asset": 1720172386815,
-    "meta": 1720172386816,
-    "relativePath": "Sprites/Login"
-  },
-  "5cb4ec0c-64b3-4f60-bbb0-53f03b877419": {
-    "asset": 1720173013543,
-    "meta": 1720176638740,
-    "relativePath": "Sprites/Login/loginScreen.plist"
-  },
-  "771853d3-e861-47ed-ae2b-4bdb28e99475": {
-    "asset": 1720173013542,
-    "meta": 1720173022321,
-    "relativePath": "Sprites/Login/loginScreen.png"
-  },
-  "10980203-7005-41b2-9d4e-995991561948": {
-    "asset": 1720173063398,
-    "meta": 1720173063403,
-    "relativePath": "Sprites/Background"
-  },
-  "08db7bed-32f2-4b9d-bc9c-bf2682e85c6f": {
-    "asset": 1720173422522,
-    "meta": 1720173430402,
-    "relativePath": "Sprites/Background/LobbyBg.png"
-  },
-  "48a9d4ef-74b7-4762-a8c7-51275c8561d2": {
-    "asset": 1720173422523,
-    "meta": 1720173430405,
-    "relativePath": "Sprites/Background/LobbyBg.plist"
-  },
-  "4b2fef45-6e31-4a8b-989f-e9e085cb1afc": {
-    "asset": 1720174489993,
-    "meta": 1720174489997,
-    "relativePath": "Fonts/BarlowCondensed-Regular.ttf"
-  },
-  "6c21c873-3bba-44e0-9782-2642b6db3133": {
-    "asset": 1720175083619,
-    "meta": 1720175099446,
-    "relativePath": "Sprites/Background/LoginBg.png"
-  },
-  "da07dd19-28a4-41b2-bddb-5539e1e1e1fe": {
-    "asset": 1720175083619,
-    "meta": 1720175099447,
-    "relativePath": "Sprites/Background/LoginBg.plist"
-  },
-  "1c27b286-f1a6-45d2-a0ff-1d8aa1e20313": {
-    "asset": 1720176334000,
-    "meta": 1720176334003,
-    "relativePath": "Fonts/BeVietnamPro-ExtraLight.ttf"
-  },
-  "243f2e12-935f-4ea6-9314-fe2276b7dc84": {
-    "asset": 1720176787094,
-    "meta": 1720176787116,
-    "relativePath": "Sprites/Login/lastCheckbox.png"
-  },
   "9836134e-b892-4283-b6b2-78b5acf3ed45": {
     "asset": 1637579759000,
     "meta": 1720183287072,
@@ -584,14 +499,204 @@
     "meta": 1720183287365,
     "relativePath": "model/primitives.fbx"
   },
+  "0e411113-75c1-4841-86f7-22664de91c32": {
+    "asset": 1720185463905,
+    "meta": 1720244255562,
+    "relativePath": "anim"
+  },
+  "a0aed82f-c22f-4c5f-bbca-b75df0f42e77": {
+    "asset": 1720243767489,
+    "meta": 1720244255563,
+    "relativePath": "Fonts"
+  },
+  "4b2fef45-6e31-4a8b-989f-e9e085cb1afc": {
+    "asset": 1720243767488,
+    "meta": 1720244255564,
+    "relativePath": "Fonts/BarlowCondensed-Regular.ttf"
+  },
+  "1c27b286-f1a6-45d2-a0ff-1d8aa1e20313": {
+    "asset": 1720243767489,
+    "meta": 1720244255564,
+    "relativePath": "Fonts/BeVietnamPro-ExtraLight.ttf"
+  },
+  "fef106d6-86a3-482e-b769-3e65b1bc5cb7": {
+    "asset": 1720243767489,
+    "meta": 1720244255565,
+    "relativePath": "Scenes"
+  },
+  "cdb23e58-31ba-4da0-9b8b-c971cae33aab": {
+    "asset": 1720244255558,
+    "meta": 1720244255565,
+    "relativePath": "Scripts"
+  },
+  "36eb698e-15e7-46dd-8ab6-207355f0d946": {
+    "asset": 1720243767490,
+    "meta": 1720244255577,
+    "relativePath": "Scripts/login"
+  },
+  "bf475058-8a52-440e-a3c6-6325ee644733": {
+    "asset": 1720243767507,
+    "meta": 1720244255584,
+    "relativePath": "Sprites"
+  },
+  "10980203-7005-41b2-9d4e-995991561948": {
+    "asset": 1720243767507,
+    "meta": 1720244255584,
+    "relativePath": "Sprites/Background"
+  },
+  "2eb808c4-54b0-4c30-8a57-b53c20d2b9d3": {
+    "asset": 1720243767514,
+    "meta": 1720244255585,
+    "relativePath": "Sprites/Login"
+  },
+  "48a9d4ef-74b7-4762-a8c7-51275c8561d2": {
+    "asset": 1720243767491,
+    "meta": 1720244255601,
+    "relativePath": "Sprites/Background/LobbyBg.plist"
+  },
+  "da07dd19-28a4-41b2-bddb-5539e1e1e1fe": {
+    "asset": 1720243767498,
+    "meta": 1720244255601,
+    "relativePath": "Sprites/Background/LoginBg.plist"
+  },
+  "5cb4ec0c-64b3-4f60-bbb0-53f03b877419": {
+    "asset": 1720243767507,
+    "meta": 1720244255601,
+    "relativePath": "Sprites/Login/loginScreen.plist"
+  },
+  "a8cc58cf-815d-47f6-b8b8-330f6af854f3": {
+    "asset": 1720267598712,
+    "meta": 1720267598718,
+    "relativePath": "Scenes/login.fire"
+  },
+  "6c21c873-3bba-44e0-9782-2642b6db3133": {
+    "asset": 1720243767507,
+    "meta": 1720244255596,
+    "relativePath": "Sprites/Background/LoginBg.png"
+  },
+  "771853d3-e861-47ed-ae2b-4bdb28e99475": {
+    "asset": 1720243767514,
+    "meta": 1720244255597,
+    "relativePath": "Sprites/Login/loginScreen.png"
+  },
+  "08db7bed-32f2-4b9d-bc9c-bf2682e85c6f": {
+    "asset": 1720243767497,
+    "meta": 1720244255598,
+    "relativePath": "Sprites/Background/LobbyBg.png"
+  },
+  "243f2e12-935f-4ea6-9314-fe2276b7dc84": {
+    "asset": 1720243767507,
+    "meta": 1720244255594,
+    "relativePath": "Sprites/Login/lastCheckbox.png"
+  },
+  "46ebebcc-0dd7-4e94-a853-4dc99644afcc": {
+    "asset": 1720244393308,
+    "meta": 1720246926178,
+    "relativePath": "Scripts/Config"
+  },
+  "2e43ed49-087f-4c8c-90c5-f7c84d87e341": {
+    "asset": 1720253445630,
+    "meta": 1720253445631,
+    "relativePath": "Sprites/LobbySprite"
+  },
+  "d8b355be-7e71-477c-92b8-826a55ad3f6e": {
+    "asset": 1720251119522,
+    "meta": 1720253445663,
+    "relativePath": "Sprites/LobbySprite/LobbySprites.png"
+  },
+  "0c26e052-a1a4-4aab-9b69-5ce49e169028": {
+    "asset": 1720251119525,
+    "meta": 1720253445668,
+    "relativePath": "Sprites/LobbySprite/LobbySprites.plist"
+  },
+  "584dd858-5728-417f-9ea5-bb66ec45e5af": {
+    "asset": 1720253993952,
+    "meta": 1720253993957,
+    "relativePath": "Fonts/AlegreyaSC-Regular.ttf"
+  },
+  "3e8a5f4a-f62a-48fd-8279-7cc34db640a5": {
+    "asset": 1720254365801,
+    "meta": 1720254365823,
+    "relativePath": "Sprites/CoinsSprite.png"
+  },
+  "669bebe5-58f8-4552-8f76-8b76b1108498": {
+    "asset": 1720258923241,
+    "meta": 1720258923242,
+    "relativePath": "Sprites/LobbySprite/SpinWheel"
+  },
+  "1622fa03-b482-4e9e-a5dc-0e8523daa206": {
+    "asset": 1720258894004,
+    "meta": 1720258923280,
+    "relativePath": "Sprites/LobbySprite/SpinWheel/spiningSmall.plist"
+  },
+  "68e45d6a-baeb-4ea7-ab26-9f2b94bac3e2": {
+    "asset": 1720258894003,
+    "meta": 1720258923268,
+    "relativePath": "Sprites/LobbySprite/SpinWheel/spiningSmall.png"
+  },
+  "37ab805d-94cc-49d6-8709-fcb7c5b00ed2": {
+    "asset": 1720259970413,
+    "meta": 1720259970417,
+    "relativePath": "anim/SmallSpin.anim"
+  },
+  "5be5a9e2-31da-4b4d-8bc2-4034030ec407": {
+    "asset": 1720258969828,
+    "meta": 1720258969848,
+    "relativePath": "Sprites/LobbySprite/SpinWheelFrame.png"
+  },
+  "9bf2678e-f99b-4abc-92cd-9920d8cc267c": {
+    "asset": 1720259303892,
+    "meta": 1720259303895,
+    "relativePath": "anim/Spinner.anim"
+  },
+  "f27babaa-66e1-4158-9e2b-b7fb5b7802a1": {
+    "asset": 1720261876369,
+    "meta": 1720261876370,
+    "relativePath": "Scripts/Lobby"
+  },
+  "10a2cf29-4cb1-4f3c-b5d2-bd549e1e0933": {
+    "asset": 1720262344475,
+    "meta": 1720262344501,
+    "relativePath": "Sprites/CasinoLogo.png"
+  },
+  "fc23a77d-86b6-4e64-9677-8b160c92c1f6": {
+    "asset": 1720264607228,
+    "meta": 1720264607231,
+    "relativePath": "anim/CloudAnimation.anim"
+  },
+  "08942f26-4656-4899-bac3-ddb2373eb6a6": {
+    "asset": 1720263956522,
+    "meta": 1720263956523,
+    "relativePath": "Sprites/CloudSprite"
+  },
+  "4a3cbad2-f220-4cc2-a627-3457354c2d08": {
+    "asset": 1720263950201,
+    "meta": 1720263956580,
+    "relativePath": "Sprites/CloudSprite/CloudAnim.plist"
+  },
+  "0d7f8117-add2-4a23-bb06-347ee820cf73": {
+    "asset": 1720263950198,
+    "meta": 1720263956567,
+    "relativePath": "Sprites/CloudSprite/CloudAnim.png"
+  },
   "ac1ace68-27a5-4450-bdeb-0fe6636b4ca5": {
-    "asset": 1720183827771,
-    "meta": 1720184095314,
+    "asset": 1720264335453,
+    "meta": 1720264343471,
     "relativePath": "Scripts/login/Login.js"
   },
+  "4426934e-94c5-4677-bb5b-9f5e9fa4dfb0": {
+    "asset": 1720267607965,
+    "meta": 1720267997090,
+    "relativePath": "Scripts/Lobby/Lobby.js"
+  },
+  "8da192a9-b7b1-429e-8c9c-48f1774ac5b0": {
+    "asset": 1720268333252,
+    "meta": 1720268334510,
+    "relativePath": "Scripts/Config/GameConfig.js"
+  },
   "bd2758aa-9e77-4b4e-806e-50e63132ade7": {
-    "asset": 1720183883693,
-    "meta": 1720184095325,
+    "asset": 1720268497252,
+    "meta": 1720268501251,
     "relativePath": "Scripts/ServerCom.js"
   }
 }

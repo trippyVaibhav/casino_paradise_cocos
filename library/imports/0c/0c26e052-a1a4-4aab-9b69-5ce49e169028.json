@@ -1,0 +1,65 @@
+{
+  "__type__": "cc.SpriteAtlas",
+  "_name": "LobbySprites.plist",
+  "_objFlags": 0,
+  "_native": "",
+  "_spriteFrames": {
+    "AllBg": {
+      "__uuid__": "a8f3ce8f-46d0-40db-9fac-faaba45fd93d"
+    },
+    "AllButton": {
+      "__uuid__": "9b3546e5-b58f-4be5-8aea-cf0302ee7f9b"
+    },
+    "Avtaar": {
+      "__uuid__": "1ef29f0d-096d-4e1f-8ba5-1f4c453387c5"
+    },
+    "BlueHeart": {
+      "__uuid__": "a1e672f0-a87d-4aa2-95da-b6d6ea934fbe"
+    },
+    "Favourite": {
+      "__uuid__": "db81fd00-7f1c-43a5-917e-b35031a5ebf4"
+    },
+    "Fishing": {
+      "__uuid__": "5ae4eaff-d112-40f3-a372-c3744933e389"
+    },
+    "GameFramepng": {
+      "__uuid__": "e7c8120c-7cf9-499e-8efa-f3a0e1437c22"
+    },
+    "Keno": {
+      "__uuid__": "92210aa9-5908-4c2a-9478-aa031fc2446e"
+    },
+    "Others": {
+      "__uuid__": "3074ed06-a063-49da-af49-215d815a87d5"
+    },
+    "PasswordChange": {
+      "__uuid__": "987114c3-cdd5-4ec4-a049-a6a1ec275282"
+    },
+    "Setting": {
+      "__uuid__": "89502cce-a89a-4281-8bdf-7aa26ac9047f"
+    },
+    "Slot": {
+      "__uuid__": "d5c82ee5-c839-4d20-bc58-abcd41963f50"
+    },
+    "TabBg": {
+      "__uuid__": "7b026478-b8f7-408e-9dfc-93e5787fac5f"
+    },
+    "YellowCircle": {
+      "__uuid__": "1a8a265e-3010-4b36-ac73-b51fde7f0cfb"
+    },
+    "coinscount": {
+      "__uuid__": "76a518aa-f3a2-4fdc-b86e-cbee3e78b598"
+    },
+    "fullScreeButton": {
+      "__uuid__": "5e17c944-800c-4a29-a6cf-848e66058c01"
+    },
+    "headerbg": {
+      "__uuid__": "3f509345-e039-481e-bb2f-7ef53cb86f8c"
+    },
+    "logoutButton": {
+      "__uuid__": "166e5e9a-6390-4f14-a627-ecbc2e1a0f9d"
+    },
+    "money": {
+      "__uuid__": "848c3d03-4026-4133-b8a1-faee451b4984"
+    }
+  }
+}

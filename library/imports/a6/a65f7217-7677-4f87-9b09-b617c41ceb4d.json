@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "CasinoLogo",
+    "texture": "10a2cf29-4cb1-4f3c-b5d2-bd549e1e0933",
+    "atlas": "",
+    "rect": [
+      2,
+      4,
+      483,
+      174
+    ],
+    "offset": [
+      0.5,
+      2.5
+    ],
+    "originalSize": [
+      486,
+      187
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

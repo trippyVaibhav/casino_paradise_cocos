@@ -10,6 +10,8 @@
                     };
                     function __define (exports, require, module) {
                         if (!nodeEnv) {__quick_compile_project__.registerModule(__filename, module);}
+require('./assets/Scripts/Config/GameConfig');
+require('./assets/Scripts/Lobby/Lobby');
 require('./assets/Scripts/ServerCom');
 require('./assets/Scripts/login/Login');
 

@@ -1,3 +1,5 @@
+const Cookies = require('js-cookies');
+// const axios = require('axios');
 var root = window;
 cc.Class({
     extends: cc.Component,
@@ -57,6 +59,8 @@ cc.Class({
      * @param {Number} timeout -value in milli seconds, Specify request timeout time! 
      * @memberof Utilities.ServerCom#
      */
+
+ 
     httpRequest: function (method, address, data, callback, error, timeout) {
         var inst = this;
         var xhr = new XMLHttpRequest();
@@ -72,7 +76,6 @@ cc.Class({
                 if (xhr.status >= 200 && xhr.status < 400) {
                     if (callback !== null && callback !== undefined) {
                         var data = JSON.parse(response);
-                        console.log("fgbfgbfgbfgb", data, "and xhr is", xhr);
                             callback(data);
                     }
                 } else {
@@ -83,6 +86,7 @@ cc.Class({
                             errorMsg = errorData.error;
                         }
                         console.log("errorDataerrorData", errorData, xhr);
+                        callback(errorData);
                     } catch (e) {
                         console.error("Error parsing error response:", e);
                     }
@@ -115,11 +119,33 @@ cc.Class({
                 response: "Timeout " + address,
             });
         };
+        // 
+        // xhr.withCredentials = true;
         xhr.open(method, address, true);
-        xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-        const token = cc.sys.localStorage.getItem("token");
+        var headers = {
+            "Content-Type": "application/json",
+        };
+        let token = null;
+        if (!token && cc.sys.isBrowser) {
+            const cookies = document.cookie.split(';');
+            for (let i = 0; i < cookies.length; i++) {
+                const cookie = cookies[i].trim();
+                if (cookie.startsWith('token=')) {
+                    token = cookie.substring('token='.length, cookie.length);
+                    break;
+                }
+            }
+        }
+        // If token exists, add it to a custom header
         if (token) {
-            xhr.setRequestHeader("Authorization", `Bearer ${token}`);
+            var headers = {
+                "Content-Type": "application/json",
+                Cookies: `userToken =${token}`
+            };    
+        }
+        for (const header in headers) {
+            console.log(`${header}: ${headers[header]}`);
+            xhr.setRequestHeader(header, headers[header]);
         }
         if (method === "POST") {
             xhr.send(JSON.stringify(data));
@@ -127,6 +153,7 @@ cc.Class({
             xhr.send();
         }
     },
+
     
     // WILL use the following code later to check if the same api is request untill we gets its response
     // /**

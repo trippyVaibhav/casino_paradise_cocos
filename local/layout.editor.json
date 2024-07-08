@@ -44,7 +44,7 @@
             "children": [
               {
                 "width": 1151,
-                "height": 505.984375,
+                "height": 506,
                 "type": "panel",
                 "active": 0,
                 "children": [
@@ -86,8 +86,7 @@
         "inspector",
         "cocos-services"
       ]
-    },
-    "window-1720266056899": {}
+    }
   },
   "panels": {
     "project-settings": {

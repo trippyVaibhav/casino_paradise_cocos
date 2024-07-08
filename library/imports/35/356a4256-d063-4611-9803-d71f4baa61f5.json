@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "GameFrames",
+    "texture": "d70d6b6f-3d66-4347-b455-d5268df4d46d",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      322,
+      676
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      322,
+      676
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

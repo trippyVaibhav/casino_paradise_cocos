@@ -500,13 +500,13 @@
     "relativePath": "model/primitives.fbx"
   },
   "0e411113-75c1-4841-86f7-22664de91c32": {
-    "asset": 1720185463905,
-    "meta": 1720244255562,
+    "asset": 1720262700024,
+    "meta": 1720412822492,
     "relativePath": "anim"
   },
   "a0aed82f-c22f-4c5f-bbca-b75df0f42e77": {
-    "asset": 1720243767489,
-    "meta": 1720244255563,
+    "asset": 1720253993953,
+    "meta": 1720412822491,
     "relativePath": "Fonts"
   },
   "4b2fef45-6e31-4a8b-989f-e9e085cb1afc": {
@@ -525,8 +525,8 @@
     "relativePath": "Scenes"
   },
   "cdb23e58-31ba-4da0-9b8b-c971cae33aab": {
-    "asset": 1720244255558,
-    "meta": 1720244255565,
+    "asset": 1720261885052,
+    "meta": 1720412822491,
     "relativePath": "Scripts"
   },
   "36eb698e-15e7-46dd-8ab6-207355f0d946": {
@@ -535,8 +535,8 @@
     "relativePath": "Scripts/login"
   },
   "bf475058-8a52-440e-a3c6-6325ee644733": {
-    "asset": 1720243767507,
-    "meta": 1720244255584,
+    "asset": 1720423881271,
+    "meta": 1720431366748,
     "relativePath": "Sprites"
   },
   "10980203-7005-41b2-9d4e-995991561948": {
@@ -565,8 +565,8 @@
     "relativePath": "Sprites/Login/loginScreen.plist"
   },
   "a8cc58cf-815d-47f6-b8b8-330f6af854f3": {
-    "asset": 1720267598712,
-    "meta": 1720267598718,
+    "asset": 1720444426701,
+    "meta": 1720444426705,
     "relativePath": "Scenes/login.fire"
   },
   "6c21c873-3bba-44e0-9782-2642b6db3133": {
@@ -595,8 +595,8 @@
     "relativePath": "Scripts/Config"
   },
   "2e43ed49-087f-4c8c-90c5-f7c84d87e341": {
-    "asset": 1720253445630,
-    "meta": 1720253445631,
+    "asset": 1720424161508,
+    "meta": 1720431366748,
     "relativePath": "Sprites/LobbySprite"
   },
   "d8b355be-7e71-477c-92b8-826a55ad3f6e": {
@@ -645,13 +645,13 @@
     "relativePath": "Sprites/LobbySprite/SpinWheelFrame.png"
   },
   "9bf2678e-f99b-4abc-92cd-9920d8cc267c": {
-    "asset": 1720259303892,
-    "meta": 1720259303895,
+    "asset": 1720424571104,
+    "meta": 1720424571108,
     "relativePath": "anim/Spinner.anim"
   },
   "f27babaa-66e1-4158-9e2b-b7fb5b7802a1": {
-    "asset": 1720261876369,
-    "meta": 1720261876370,
+    "asset": 1720261913532,
+    "meta": 1720412822492,
     "relativePath": "Scripts/Lobby"
   },
   "10a2cf29-4cb1-4f3c-b5d2-bd549e1e0933": {
@@ -679,24 +679,134 @@
     "meta": 1720263956567,
     "relativePath": "Sprites/CloudSprite/CloudAnim.png"
   },
+  "1814cacc-1677-42a1-9979-ceed65200553": {
+    "asset": 1720414885455,
+    "meta": 1720415075413,
+    "relativePath": "Sprites/cloudSpritepng.png"
+  },
+  "d8688dc1-ba0d-47f3-9d16-76907e581c61": {
+    "asset": 1720417033931,
+    "meta": 1720417033932,
+    "relativePath": "Prefab"
+  },
+  "d70d6b6f-3d66-4347-b455-d5268df4d46d": {
+    "asset": 1720417511376,
+    "meta": 1720417511393,
+    "relativePath": "Sprites/GameFrames.png"
+  },
+  "44c46a03-697e-4429-a62e-71da4f9787d1": {
+    "asset": 1720418017059,
+    "meta": 1720418017073,
+    "relativePath": "Sprites/LobbySprite/favouriteOuter.png"
+  },
+  "52fa4ecc-e619-42fa-8b37-f8cfb5c3fe42": {
+    "asset": 1720418122533,
+    "meta": 1720418122545,
+    "relativePath": "Sprites/LobbySprite/Blue.png"
+  },
+  "95f4f6cc-ec9a-40ae-8726-301a88504ae8": {
+    "asset": 1720419814783,
+    "meta": 1720419814799,
+    "relativePath": "Sprites/LobbySprite/SmallItemFrame.png"
+  },
+  "e8988857-50d7-4328-b4ac-bea2a8171a98": {
+    "asset": 1720420050926,
+    "meta": 1720420050939,
+    "relativePath": "Sprites/LobbySprite/newTag.png"
+  },
+  "f113a2fa-6d2d-4303-8aec-8ecd74c6eac4": {
+    "asset": 1720420527455,
+    "meta": 1720420527480,
+    "relativePath": "Sprites/LobbySprite/newParadise.png"
+  },
+  "79e48ca2-5442-4998-8c3d-7a9edf3b4114": {
+    "asset": 1720422314392,
+    "meta": 1720422314419,
+    "relativePath": "Sprites/LobbySprite/SpinBg.png"
+  },
+  "8ef25055-dc0d-41d7-a346-694e7b8fde59": {
+    "asset": 1720422416478,
+    "meta": 1720422416508,
+    "relativePath": "Sprites/LobbySprite/WheelFrame.png"
+  },
+  "cb5362bc-f64d-4f6d-8b4c-c8b092555d5f": {
+    "asset": 1720422770996,
+    "meta": 1720422771046,
+    "relativePath": "Sprites/OuterAnim1.png"
+  },
+  "fd5420be-fac3-4b22-9cd6-18913fe2eaa3": {
+    "asset": 1720422873577,
+    "meta": 1720422873616,
+    "relativePath": "Sprites/LobbySprite/Vector.png"
+  },
+  "f57e5510-2067-4f21-bbd4-8694a9f240e6": {
+    "asset": 1720423881268,
+    "meta": 1720423881331,
+    "relativePath": "Sprites/OuterAnim2.png"
+  },
+  "40e687bd-030f-4d6c-8232-0d7185aa0d04": {
+    "asset": 1720423881268,
+    "meta": 1720423881335,
+    "relativePath": "Sprites/OuterAnim3.png"
+  },
+  "bf1f2732-e405-4889-83eb-4e9d1b45aa2e": {
+    "asset": 1720423881269,
+    "meta": 1720423881338,
+    "relativePath": "Sprites/OuterAnim4.png"
+  },
+  "305392eb-b4a9-4ccf-a417-70e612e44703": {
+    "asset": 1720423881266,
+    "meta": 1720423881342,
+    "relativePath": "Sprites/OuterAnim6.png"
+  },
+  "06f9fa63-aa30-4354-bfed-957190b54af6": {
+    "asset": 1720423881266,
+    "meta": 1720423881362,
+    "relativePath": "Sprites/OuterAnim5.png"
+  },
+  "413b9f5f-8c9b-434d-8524-c538c79441ab": {
+    "asset": 1720423881268,
+    "meta": 1720423881375,
+    "relativePath": "Sprites/OuterAnim7.png"
+  },
+  "19fc1255-effc-4004-ab89-6e6f0db833ce": {
+    "asset": 1720424161507,
+    "meta": 1720424161516,
+    "relativePath": "Sprites/LobbySprite/closeButton.png"
+  },
+  "8da192a9-b7b1-429e-8c9c-48f1774ac5b0": {
+    "asset": 1720432098350,
+    "meta": 1720432112716,
+    "relativePath": "Scripts/Config/GameConfig.js"
+  },
+  "08e9da5f-4104-4835-913a-730f563cfea1": {
+    "asset": 1720442131656,
+    "meta": 1720442131677,
+    "relativePath": "Sprites/LobbySprite/popupBg.png"
+  },
+  "6b3e3206-bccf-4f7f-92fb-2fba2f146d6a": {
+    "asset": 1720442194700,
+    "meta": 1720442194711,
+    "relativePath": "Sprites/LobbySprite/Group 186.png"
+  },
+  "b6577dd3-41ee-41c0-b3cf-896718225367": {
+    "asset": 1720442937363,
+    "meta": 1720442937390,
+    "relativePath": "Sprites/LobbySprite/ErrorBg.png"
+  },
+  "bd2758aa-9e77-4b4e-806e-50e63132ade7": {
+    "asset": 1720443990136,
+    "meta": 1720444024148,
+    "relativePath": "Scripts/ServerCom.js"
+  },
   "ac1ace68-27a5-4450-bdeb-0fe6636b4ca5": {
-    "asset": 1720264335453,
-    "meta": 1720264343471,
+    "asset": 1720444064184,
+    "meta": 1720444075455,
     "relativePath": "Scripts/login/Login.js"
   },
   "4426934e-94c5-4677-bb5b-9f5e9fa4dfb0": {
-    "asset": 1720267607965,
-    "meta": 1720267997090,
+    "asset": 1720444562251,
+    "meta": 1720444570462,
     "relativePath": "Scripts/Lobby/Lobby.js"
-  },
-  "8da192a9-b7b1-429e-8c9c-48f1774ac5b0": {
-    "asset": 1720268333252,
-    "meta": 1720268334510,
-    "relativePath": "Scripts/Config/GameConfig.js"
-  },
-  "bd2758aa-9e77-4b4e-806e-50e63132ade7": {
-    "asset": 1720268497252,
-    "meta": 1720268501251,
-    "relativePath": "Scripts/ServerCom.js"
   }
 }

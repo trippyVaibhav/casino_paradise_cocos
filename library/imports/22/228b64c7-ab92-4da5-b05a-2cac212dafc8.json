@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "newParadise",
+    "texture": "f113a2fa-6d2d-4303-8aec-8ecd74c6eac4",
+    "atlas": "",
+    "rect": [
+      17,
+      18,
+      401,
+      144
+    ],
+    "offset": [
+      -0.5,
+      2
+    ],
+    "originalSize": [
+      436,
+      184
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

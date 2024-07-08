@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "OuterAnim2",
+    "texture": "f57e5510-2067-4f21-bbd4-8694a9f240e6",
+    "atlas": "",
+    "rect": [
+      21,
+      0,
+      1975,
+      1970
+    ],
+    "offset": [
+      -8.5,
+      34
+    ],
+    "originalSize": [
+      2034,
+      2038
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

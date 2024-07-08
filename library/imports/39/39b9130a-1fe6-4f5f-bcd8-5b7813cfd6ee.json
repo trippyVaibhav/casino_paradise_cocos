@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "OuterAnim4",
+    "texture": "bf1f2732-e405-4889-83eb-4e9d1b45aa2e",
+    "atlas": "",
+    "rect": [
+      21,
+      0,
+      1974,
+      1970
+    ],
+    "offset": [
+      -9,
+      34
+    ],
+    "originalSize": [
+      2034,
+      2038
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

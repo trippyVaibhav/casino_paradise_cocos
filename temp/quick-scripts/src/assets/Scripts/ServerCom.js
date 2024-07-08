@@ -4,6 +4,9 @@ cc._RF.push(module, 'bd275iqnndLToBuUOYxMq3n', 'ServerCom');
 
 "use strict";
 
+var Cookies = require('js-cookies'); // const axios = require('axios');
+
+
 var root = window;
 cc.Class({
   "extends": cc.Component,
@@ -82,7 +85,6 @@ cc.Class({
         if (xhr.status >= 200 && xhr.status < 400) {
           if (callback !== null && callback !== undefined) {
             var data = JSON.parse(response);
-            console.log("fgbfgbfgbfgb", data, "and xhr is", xhr);
             callback(data);
           }
         } else {
@@ -96,6 +98,7 @@ cc.Class({
             }
 
             console.log("errorDataerrorData", errorData, xhr);
+            callback(errorData);
           } catch (e) {
             console.error("Error parsing error response:", e);
           }
@@ -128,14 +131,40 @@ cc.Class({
         code: K.Error.TimeOutError,
         response: "Timeout " + address
       });
-    };
+    }; // 
+    // xhr.withCredentials = true;
+
 
     xhr.open(method, address, true);
-    xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-    var token = cc.sys.localStorage.getItem("token");
+    var headers = {
+      "Content-Type": "application/json"
+    };
+    var token = null;
+
+    if (!token && cc.sys.isBrowser) {
+      var cookies = document.cookie.split(';');
+
+      for (var i = 0; i < cookies.length; i++) {
+        var cookie = cookies[i].trim();
+
+        if (cookie.startsWith('token=')) {
+          token = cookie.substring('token='.length, cookie.length);
+          break;
+        }
+      }
+    } // If token exists, add it to a custom header
+
 
     if (token) {
-      xhr.setRequestHeader("Authorization", "Bearer " + token);
+      var headers = {
+        "Content-Type": "application/json",
+        Cookies: "userToken =" + token
+      };
+    }
+
+    for (var header in headers) {
+      console.log(header + ": " + headers[header]);
+      xhr.setRequestHeader(header, headers[header]);
     }
 
     if (method === "POST") {

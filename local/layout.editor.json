@@ -86,7 +86,8 @@
         "inspector",
         "cocos-services"
       ]
-    }
+    },
+    "window-1720526114133": {}
   },
   "panels": {
     "project-settings": {
@@ -106,6 +107,12 @@
       "y": 263,
       "width": 584,
       "height": 554
+    },
+    "store": {
+      "x": 460,
+      "y": 163,
+      "width": 1000,
+      "height": 728
     }
   },
   "panelLabelWidth": {}

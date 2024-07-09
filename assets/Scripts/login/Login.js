@@ -28,12 +28,19 @@ cc.Class({
             default: null,
             type: cc.Node
         },
+        
     
     },
     // LIFE-CYCLE CALLBACKS:
     onLoad () {
         if(this.rememberMe){
             this.rememberMe.isChecked = false;
+        }
+       
+    },
+    logutClick(){
+        if(this.lobbyNode.active){
+            this.lobbyNode.active = false;
         }
     },
 
@@ -69,11 +76,11 @@ cc.Class({
             }
             else{
                 console.log("response of user not found on login page", response);
-                this.errorLable.string = response.error
-                this.loginErrorNode.active = true;
-                setTimeout(() => {
-                    this.loginErrorNode.active = false;
-                }, 2000);
+                // this.errorLable.string = response.error
+                // this.loginErrorNode.active = true;
+                // setTimeout(() => {
+                //     this.loginErrorNode.active = false;
+                // }, 2000);
             }
             
         }.bind(this));

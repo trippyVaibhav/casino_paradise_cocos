@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "ConfirmButton",
+    "texture": "fd6a0af6-9c3b-440a-b6d4-c169f72a3a33",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      358,
+      103
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      358,
+      103
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

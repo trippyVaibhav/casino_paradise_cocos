@@ -1,5 +1,7 @@
 const Cookies = require('js-cookies');
+// const axios = require('./axios/dist/axios');
 // const axios = require('axios');
+
 var root = window;
 cc.Class({
     extends: cc.Component,
@@ -15,9 +17,13 @@ cc.Class({
         tracker: {
             default: {},
         },
-        errorLabel:{
+        errorLable:{
             default: null,
-            type: cc.Label
+            type:cc.Label
+        },
+        loginErrorNode:{
+            default: null,
+            type: cc.Node
         },
         trackerCount: 0,
         timer : 0,
@@ -86,7 +92,12 @@ cc.Class({
                             errorMsg = errorData.error;
                         }
                         console.log("errorDataerrorData", errorData, xhr);
-                        callback(errorData);
+                        inst.errorLable.string = errorData.error
+                        inst.loginErrorNode.active = true;
+                        setTimeout(() => {
+                            inst.loginErrorNode.active = false;
+                        }, 2000);
+                        // callback(errorData);
                     } catch (e) {
                         console.error("Error parsing error response:", e);
                     }
@@ -122,9 +133,7 @@ cc.Class({
         // 
         // xhr.withCredentials = true;
         xhr.open(method, address, true);
-        var headers = {
-            "Content-Type": "application/json",
-        };
+        xhr.setRequestHeader("Content-Type", "application/json");
         let token = null;
         if (!token && cc.sys.isBrowser) {
             const cookies = document.cookie.split(';');
@@ -138,14 +147,7 @@ cc.Class({
         }
         // If token exists, add it to a custom header
         if (token) {
-            var headers = {
-                "Content-Type": "application/json",
-                Cookies: `userToken =${token}`
-            };    
-        }
-        for (const header in headers) {
-            console.log(`${header}: ${headers[header]}`);
-            xhr.setRequestHeader(header, headers[header]);
+            xhr.setRequestHeader("Cookie", `userToken=${token}`);
         }
         if (method === "POST") {
             xhr.send(JSON.stringify(data));

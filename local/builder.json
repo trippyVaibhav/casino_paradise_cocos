@@ -1,6 +1,6 @@
 {
-  "platform": "web-desktop",
-  "actualPlatform": "web-desktop",
+  "platform": "ios",
+  "actualPlatform": "ios",
   "template": "link",
   "buildPath": "./build",
   "debug": false,

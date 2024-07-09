@@ -1,6 +1,6 @@
 
 (function () {
-var scripts = [{"deps":{"./assets/Scripts/Lobby/Lobby":3,"./assets/Scripts/login/Login":4,"./assets/Scripts/ServerCom":1,"./assets/Scripts/Config/GameConfig":2},"path":"preview-scripts/__qc_index__.js"},{"deps":{"js-cookies":5},"path":"preview-scripts/assets/Scripts/ServerCom.js"},{"deps":{},"path":"preview-scripts/assets/Scripts/Config/GameConfig.js"},{"deps":{"js-cookies":5},"path":"preview-scripts/assets/Scripts/Lobby/Lobby.js"},{"deps":{},"path":"preview-scripts/assets/Scripts/login/Login.js"},{"deps":{},"path":"preview-scripts/__node_modules/js-cookies/index.js"}];
+var scripts = [{"deps":{"./assets/Scripts/login/Login":2,"./assets/Scripts/Config/GameConfig":3,"./assets/Scripts/Lobby/Lobby":4,"./assets/Scripts/ServerCom":1},"path":"preview-scripts/__qc_index__.js"},{"deps":{"js-cookies":5},"path":"preview-scripts/assets/Scripts/ServerCom.js"},{"deps":{},"path":"preview-scripts/assets/Scripts/login/Login.js"},{"deps":{},"path":"preview-scripts/assets/Scripts/Config/GameConfig.js"},{"deps":{"Login":2,"js-cookies":5},"path":"preview-scripts/assets/Scripts/Lobby/Lobby.js"},{"deps":{},"path":"preview-scripts/__node_modules/js-cookies/index.js"}];
 var entries = ["preview-scripts/__qc_index__.js"];
 var bundleScript = 'preview-scripts/__qc_bundle__.js';
 

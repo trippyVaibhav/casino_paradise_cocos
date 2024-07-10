@@ -28,7 +28,7 @@ jobs:
           cd cocos2d-x
           git checkout v4
           ./setup.py
-          source install-deps-linux.sh
+          yes | source install-deps-linux.sh 
 
       - name: Setup Node.js
         uses: actions/setup-node@v3

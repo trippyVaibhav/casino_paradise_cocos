@@ -28,7 +28,6 @@ jobs:
           cd cocos2d-x
           git checkout v4
           ./setup.py
-          echo "The value of MY_VARIABLE is $MY_VARIABLE"
           source install-deps-linux.sh
 
       - name: Setup Node.js
@@ -38,7 +37,9 @@ jobs:
       
     
       - name: Install npm dependencies
-        run: npm install
+        run: |
+          echo "The value of MY_VARIABLE is $MY_VARIABLE"
+          npm install
 
       - name: Build Cocos2d-x WebGL
         run: |

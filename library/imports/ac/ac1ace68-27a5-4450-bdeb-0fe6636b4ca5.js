@@ -38,6 +38,11 @@ cc.Class({
       this.rememberMe.isChecked = false;
     }
   },
+  logutClick: function logutClick() {
+    if (this.lobbyNode.active) {
+      this.lobbyNode.active = false;
+    }
+  },
   onLoginClick: function onLoginClick() {
     var _this = this;
 
@@ -57,8 +62,6 @@ cc.Class({
     }
 
     ServerCom.httpRequest("POST", address, data, function (response) {
-      var _this2 = this;
-
       if (response.token) {
         var randomNumber = Math.floor(Math.random() * 10) + 1;
 
@@ -75,12 +78,11 @@ cc.Class({
           this.lobbyNode.active = true;
         }.bind(this), 1000);
       } else {
-        console.log("response of user not found on login page", response);
-        this.errorLable.string = response.error;
-        this.loginErrorNode.active = true;
-        setTimeout(function () {
-          _this2.loginErrorNode.active = false;
-        }, 2000);
+        console.log("response of user not found on login page", response); // this.errorLable.string = response.error
+        // this.loginErrorNode.active = true;
+        // setTimeout(() => {
+        //     this.loginErrorNode.active = false;
+        // }, 2000);
       }
     }.bind(this));
   }

@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "crossClose",
+    "texture": "c6d83d12-5b33-4ca5-b793-509e411bf5b0",
+    "atlas": "",
+    "rect": [
+      4,
+      4,
+      61,
+      61
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      69,
+      69
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

@@ -4,7 +4,8 @@ cc._RF.push(module, 'bd275iqnndLToBuUOYxMq3n', 'ServerCom');
 
 "use strict";
 
-var Cookies = require('js-cookies'); // const axios = require('axios');
+var Cookies = require('js-cookies'); // const axios = require('./axios/dist/axios');
+// const axios = require('axios');
 
 
 var root = window;
@@ -22,9 +23,13 @@ cc.Class({
     tracker: {
       "default": {}
     },
-    errorLabel: {
+    errorLable: {
       "default": null,
       type: cc.Label
+    },
+    loginErrorNode: {
+      "default": null,
+      type: cc.Node
     },
     trackerCount: 0,
     timer: 0
@@ -98,7 +103,11 @@ cc.Class({
             }
 
             console.log("errorDataerrorData", errorData, xhr);
-            callback(errorData);
+            inst.errorLable.string = errorData.error;
+            inst.loginErrorNode.active = true;
+            setTimeout(function () {
+              inst.loginErrorNode.active = false;
+            }, 2000); // callback(errorData);
           } catch (e) {
             console.error("Error parsing error response:", e);
           }
@@ -136,9 +145,7 @@ cc.Class({
 
 
     xhr.open(method, address, true);
-    var headers = {
-      "Content-Type": "application/json"
-    };
+    xhr.setRequestHeader("Content-Type", "application/json");
     var token = null;
 
     if (!token && cc.sys.isBrowser) {
@@ -156,15 +163,7 @@ cc.Class({
 
 
     if (token) {
-      var headers = {
-        "Content-Type": "application/json",
-        Cookies: "userToken =" + token
-      };
-    }
-
-    for (var header in headers) {
-      console.log(header + ": " + headers[header]);
-      xhr.setRequestHeader(header, headers[header]);
+      xhr.setRequestHeader("Cookie", "userToken=" + token);
     }
 
     if (method === "POST") {

@@ -43,7 +43,7 @@ jobs:
       - name: Build Cocos2d-x WebGL
         run: |
           cd ./assets
-          cocos run -p web --engine ../cocos2d-x
+          cocos compile -p web
 
       - name: Upload Build Artifacts
         uses: actions/upload-artifact@v3

@@ -39,6 +39,7 @@ jobs:
       - name: Install npm dependencies
         run: |
           npm install
+          cocos -v  
 
       - name: Build Cocos2d-x WebGL
         run: |

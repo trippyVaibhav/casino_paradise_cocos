@@ -15,59 +15,52 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
-      with:
-        ref: dev
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          ref: dev
         
-       
-
-    -name: Setup Cocos2d-x
-        run: |# Install dependencies
+      - name: Setup Cocos2d-x
+        run: |
           sudo apt-get update
           sudo apt-get install -y build-essential cmake
+          git clone https://github.com/cocos2d/cocos2d-x.git
+          cd cocos2d-x
+          git checkout 4.0
+          ./setup.py
+          source cocos2d-env.sh
 
-
-        # Clone and setup Cocos2d-x
-        git clone https://github.com/cocos2d/cocos2d-x.git
-        cd cocos2d-x
-        git checkout 4.0  # Change to your desired Cocos2d-x version
-        ./setup.py
-        source cocos2d-env.sh
-
-
-    -name: Setup Node.js
+      - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '16'  # Specify the Node.js version required
+          node-version: '16'
     
-    -name: Install npm dependencies
+      - name: Install npm dependencies
         run: npm install
 
-    -name: Build Cocos2d-x WebGL
+      - name: Build Cocos2d-x WebGL
         run: |
-          cd ./assets  # Replace with the path to your Cocos2d-x project
-          cocos run -p web --engine ../cocos2d-x  # Adjust the engine path if necessary
+          cd ./assets
+          cocos run -p web --engine ../cocos2d-x
 
+      - name: Upload Build Artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: artifact
+          path: ./build
 
-
-    - name: Upload Build Artifacts
-      uses: actions/upload-artifact@v3
-      with:
-        name: artifact
-        path: ./build
-
-    - name: Commit and Push Build Artifacts
-      env:
-        GITHUB_TOKEN: ${{ secrets.G_TOKEN }}
-      run: |
-        git config advice.addIgnoredFile false
-        git rev-parse --abbrev-ref HEAD
-        git config --global user.name "TrippyVaibhav"
-        git config --global user.email "vaibhav.trippybug@gmail.com"
-        git checkout -b build-artifacts
-        git add -f ./build
-        git commit -m 'added: build artifacts'
-        git push --set-upstream origin build-artifacts
+      - name: Commit and Push Build Artifacts
+        env:
+          GITHUB_TOKEN: ${{ secrets.G_TOKEN }}
+        run: |
+          git config advice.addIgnoredFile false
+          git rev-parse --abbrev-ref HEAD
+          git config --global user.name "TrippyRahul"
+          git config --global user.email "rahulrawat.trippybug@gmail.com"
+          git checkout -b build-artifacts
+          git add -f ./build
+          git commit -m 'added: build artifacts'
+          git push --set-upstream origin build-artifacts
   
   create_pull_request:
     needs: build
@@ -75,50 +68,51 @@ jobs:
     outputs:
       pull_request_number: ${{ steps.create_pr.outputs.pull-request-number }}
     steps:
-    - name: Checkout Repository
-      uses: actions/checkout@v4
+      - name: Checkout Repository
+        uses: actions/checkout@v4
 
-    - name: Download Build Artifacts
-      uses: actions/download-artifact@v3
-      with:
-        name: artifact
+      - name: Download Build Artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: artifact
         
-    - name: List Downloaded Artifacts
-      run: ls -l
+      - name: List Downloaded Artifacts
+        run: ls -l
   
-    - name: Create Pull Request
-      id: create_pr
-      uses: peter-evans/create-pull-request@v5
-      with:
-        token: ${{ secrets.G_TOKEN }}
-        commit-message: 'added: build artifacts'
-        branch: build-artifacts
-        base: main
-        title: 'Add build artifacts'
-        body: 'This pull request contains the build artifacts.'
-        labels: 'auto-approve'
+      - name: Create Pull Request
+        id: create_pr
+        uses: peter-evans/create-pull-request@v5
+        with:
+          token: ${{ secrets.G_TOKEN }}
+          commit-message: 'added: build artifacts'
+          branch: build-artifacts
+          base: main
+          title: 'Add build artifacts'
+          body: 'This pull request contains the build artifacts.'
+          labels: 'auto-approve'
 
   merge_pull_request:
     needs: create_pull_request
     runs-on: ubuntu-latest
     steps:
-    - name: Merge Pull Request
-      run: |
-        PR_NUMBER="${{ needs.create_pull_request.outputs.pull_request_number }}"
-        curl -X PUT \
-          -H "Authorization: token ${{ secrets.G_TOKEN }}" \
-          -H "Accept: application/vnd.github.v3+json" \
-          https://api.github.com/repos/${{ github.repository }}/pulls/${PR_NUMBER}/merge
+      - name: Merge Pull Request
+        run: |
+          PR_NUMBER="${{ needs.create_pull_request.outputs.pull_request_number }}"
+          curl -X PUT \
+            -H "Authorization: token ${{ secrets.G_TOKEN }}" \
+            -H "Accept: application/vnd.github.v3+json" \
+            https://api.github.com/repos/${{ github.repository }}/pulls/${PR_NUMBER}/merge
+
   cleanup:
     if: ${{ always() }}
     needs: [merge_pull_request, build]
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout Repository
-      uses: actions/checkout@v4
+      - name: Checkout Repository
+        uses: actions/checkout@v4
 
-    - name: Delete Build Artifacts Branch
-      env:
-        GITHUB_TOKEN: ${{ secrets.G_TOKEN }}
-      run: |
-        git push origin --delete build-artifacts
+      - name: Delete Build Artifacts Branch
+        env:
+          GITHUB_TOKEN: ${{ secrets.G_TOKEN }}
+        run: |
+          git push origin --delete build-artifacts

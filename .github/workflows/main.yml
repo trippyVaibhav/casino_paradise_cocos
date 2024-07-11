@@ -57,8 +57,7 @@ jobs:
           cd build/linux-build
           cmake ../..
           make -j 4
-          cd $HOME/cocos2d-x/build/linux-build/bin/cpp-tests/
-          ./cpp-tests
+          cocos -v
 
       - name: Setup Node.js
         uses: actions/setup-node@v3

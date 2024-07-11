@@ -50,10 +50,10 @@ jobs:
           fi
           cd $HOME/cocos2d-x
           git checkout v4
-          git clone https://github.com/cocos2d/bindings-generator.git
-          git clone https://github.com/cocos2d/cocos2d-console.git
           echo Yes | python download-deps.py
           echo y | source install-deps-linux.sh
+          git clone https://github.com/cocos2d/bindings-generator.git
+          git clone https://github.com/cocos2d/cocos2d-console.git
           mkdir -p build/linux-build
           cd build/linux-build
           cmake ../..

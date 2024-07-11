@@ -37,6 +37,7 @@ jobs:
       - name: Setup Cocos2d-x
         run: |
           git clone https://github.com/cocos2d/cocos2d-x.git
+           cd cocos2d-x
           git checkout v4
           python setup.py
           y | source install-deps-linux.sh

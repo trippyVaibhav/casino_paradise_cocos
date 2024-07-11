@@ -81,7 +81,7 @@ jobs:
       - name: Install npm dependencies
         run: |
           npm install
-          cocos -v  # Verify the `cocos` command is available
+        
 
       - name: Build Cocos2d-x WebGL
         run: |

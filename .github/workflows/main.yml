@@ -50,9 +50,9 @@ jobs:
           fi
           cd $HOME/cocos2d-x
           git checkout v4
-          echo Yes | python download-deps.py
           git submodule update --init
-          echo y | source install-deps-linux.sh
+          git submodule update
+          echo Yes | python download-deps.py
           mkdir -p build/linux-build
           cd build/linux-build
           cmake ../..

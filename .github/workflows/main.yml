@@ -23,20 +23,20 @@ jobs:
         with:
           ref: dev
 
-      - name: Install Python 2.7
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y python2.7 python2.7-dev python-pip
-          python2.7 -m pip install --upgrade pip
-
-      - name: Install Dependencies
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y build-essential cmake git
+      - name: Cache Cocos2d-x Repository
+        id: cache-cocos2d-x
+        uses: actions/cache@v3
+        with:
+          path: ${{ github.workspace }}/cocos2d-x
+          key: ${{ runner.os }}-cocos2d-x-${{ hashFiles('**/cocos2d-x/.git/HEAD') }}
+          restore-keys: |
+            ${{ runner.os }}-cocos2d-x-
 
       - name: Setup Cocos2d-x
         run: |
-          git clone https://github.com/cocos2d/cocos2d-x.git
+          if [ ! -d "$HOME/cocos2d-x" ]; then
+            git clone https://github.com/cocos2d/cocos2d-x.git $HOME/cocos2d-x
+          fi
           cd cocos2d-x
           git checkout v4
           python setup.py

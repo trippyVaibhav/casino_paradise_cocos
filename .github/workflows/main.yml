@@ -40,7 +40,7 @@ jobs:
            cd cocos2d-x
           git checkout v4
           python setup.py
-          y | source install-deps-linux.sh
+          echo y | source install-deps-linux.sh
           # Add Cocos2d-x to PATH
           echo "export PATH=$PATH:$HOME/cocos2d-x/tools/cocos2d-console/bin" >> $GITHUB_ENV
 

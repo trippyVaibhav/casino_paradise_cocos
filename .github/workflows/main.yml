@@ -18,16 +18,45 @@ jobs:
         python-version: [2.7]
 
     steps:
+      - name: Cache Repository
+        uses: actions/cache@v3
+        with:
+          path: |
+            .git
+            .github
+            # Add any other directories or files to cache here
+          key: ${{ runner.os }}-repo-${{ hashFiles('**/your-cache-key-file') }}
+          restore-keys: |
+            ${{ runner.os }}-repo-
+
       - name: Checkout Repository
         uses: actions/checkout@v4
         with:
           ref: dev
+
+      - name: Cache Python Packages
+        uses: actions/cache@v3
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-python-${{ matrix.python-version }}-pip-${{ hashFiles('**/requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-python-${{ matrix.python-version }}-pip-
 
       - name: Install Python 2.7
         run: |
           sudo apt-get update
           sudo apt-get install -y python2.7 python2.7-dev python-pip
           python2.7 -m pip install --upgrade pip
+
+      - name: Cache Node Modules
+        uses: actions/cache@v3
+        with:
+          path: |
+            ~/.npm
+            ./node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
 
       - name: Install Dependencies
         run: |

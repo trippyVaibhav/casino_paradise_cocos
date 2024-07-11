@@ -53,6 +53,7 @@ jobs:
           git clone https://github.com/cocos2d/bindings-generator.git
           git clone https://github.com/cocos2d/cocos2d-console.git
           echo Yes | python download-deps.py
+          echo y | source install-deps-linux.sh
           mkdir -p build/linux-build
           cd build/linux-build
           cmake ../..

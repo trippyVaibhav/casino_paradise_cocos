@@ -57,9 +57,7 @@ jobs:
           mkdir -p build/linux-build
           cd build/linux-build
           cmake ../..
-          set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -no-pie -fexceptions -std=c++11 -Wno-deprecated-declarations -Wno-reorder")
           make -j 4
-          cocos -v
 
       - name: Setup Node.js
         uses: actions/setup-node@v3

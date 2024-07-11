@@ -55,7 +55,6 @@ jobs:
 
       - name: Build Cocos2d-x WebGL
         run: |
-          export PATH=$PATH:$HOME/cocos2d-x/tools/cocos2d-console/bin
           cocos -v
           cd ./assets
           cocos compile -p web

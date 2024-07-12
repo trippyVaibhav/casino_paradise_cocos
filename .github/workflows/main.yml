@@ -27,7 +27,10 @@ jobs:
 
     - name: Install Cocos CLI
       run: npm install -g cocos-cli
-
+      
+    - name: Add npm global bin to PATH
+      run: echo "${HOME}/.npm-global/bin" >> $GITHUB_PATH
+      
     - name: Install dependencies
       run: npm install
 

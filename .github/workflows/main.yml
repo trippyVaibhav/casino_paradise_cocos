@@ -13,12 +13,21 @@ permissions:
 jobs:
   build:
     runs-on: windows-latest
+    strategy:
+      matrix:
+        python-version: [2.7]
+
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
         with:
           ref: dev
 
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python-version }}
+ 
       - name: Install Dependencies
         run: |
           choco install cmake --version 3.21.2
@@ -34,7 +43,7 @@ jobs:
           python ./setup.py
           cd $env:USERPROFILE\cocos2d-x\tests\cpp-tests
           mkdir win32-build
-          cmake ..
+          cmake ../..
           make
           cd win32-build
           mkdir win32-build

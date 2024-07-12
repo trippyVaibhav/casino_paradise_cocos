@@ -33,11 +33,11 @@ jobs:
           ./download-deps.py
           cd $env:USERPROFILE\cocos2d-x\tests\cpp-tests
           mkdir win32-build
+          cmake ..
+          make
           cd win32-build
           mkdir win32-build
           cd win32-build
-          cmake ../..
-          make
           cocos run -p win32
 
       - name: Setup Node.js

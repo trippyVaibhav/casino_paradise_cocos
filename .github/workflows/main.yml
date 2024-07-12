@@ -1,135 +1,37 @@
-name: Build and Deploy
+name: CI/CD for Cocos2D WebGL
 
 on:
   push:
     branches:
-      - 'dev'
-  workflow_dispatch:
-
-permissions:
-  contents: write
-  pull-requests: write
+      - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
   build:
-    runs-on: windows-latest
-    strategy:
-      matrix:
-        python-version: [2.7]
-
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
-        with:
-          ref: dev
- 
-      - name: Install Dependencies
-        run: |
-          # choco install cmake --version 3.21.2
-          choco install git
-          choco install python2 --version 2.7.18
-
-
-      - name: Setup Cocos2d-x
-        run: |
-          git clone https://github.com/cocos2d/cocos2d-x.git $env:USERPROFILE\cocos2d-x
-          cd $env:USERPROFILE\cocos2d-x
-          git checkout v4
-          ./download-deps.py
-          msi ./setup.py
-          cd $env:USERPROFILE\cocos2d-x\tests\cpp-tests
-          mkdir win32-build
-          cmake ../..
-          make
-          cd win32-build
-          mkdir win32-build
-          cd win32-build
-          cocos run -p win32
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '20'
-
-      - name: Install npm dependencies
-        run: npm install
-
-      - name: Build Cocos2d-x WebGL
-        run: |
-          cocos -v
-          cd ./assets
-          cocos compile -p web
-
-      - name: Upload Build Artifacts
-        uses: actions/upload-artifact@v3
-        with:
-          name: artifact
-          path: ./build
-
-      - name: Commit and Push Build Artifacts
-        env:
-          GITHUB_TOKEN: ${{ secrets.G_TOKEN }}
-        run: |
-          git config advice.addIgnoredFile false
-          git rev-parse --abbrev-ref HEAD
-          git config --global user.name "TrippyRahul"
-          git config --global user.email "rahulrawat.trippybug@gmail.com"
-          git checkout -b build-artifacts
-          git add -f ./build
-          git commit -m 'added: build artifacts'
-          git push --set-upstream origin build-artifacts
-  
-  create_pull_request:
-    needs: build
     runs-on: ubuntu-latest
-    outputs:
-      pull_request_number: ${{ steps.create_pr.outputs.pull-request-number }}
+
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
+    - name: Checkout code
+      uses: actions/checkout@v2
 
-      - name: Download Build Artifacts
-        uses: actions/download-artifact@v3
-        with:
-          name: artifact
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'
 
-      - name: List Downloaded Artifacts
-        run: ls -l
-  
-      - name: Create Pull Request
-        id: create_pr
-        uses: peter-evans/create-pull-request@v5
-        with:
-          token: ${{ secrets.G_TOKEN }}
-          commit-message: 'added: build artifacts'
-          branch: build-artifacts
-          base: main
-          title: 'Add build artifacts'
-          body: 'This pull request contains the build artifacts.'
-          labels: 'auto-approve'
+    - name: Install Cocos CLI
+      run: npm install -g cocos-cli
 
-  merge_pull_request:
-    needs: create_pull_request
-    runs-on: ubuntu-latest
-    steps:
-      - name: Merge Pull Request
-        run: |
-          PR_NUMBER="${{ needs.create_pull_request.outputs.pull_request_number }}"
-          curl -X PUT \
-            -H "Authorization: token ${{ secrets.G_TOKEN }}" \
-            -H "Accept: application/vnd.github.v3+json" \
-            https://api.github.com/repos/${{ github.repository }}/pulls/${PR_NUMBER}/merge
+    - name: Install dependencies
+      run: npm install
 
-  cleanup:
-    if: ${{ always() }}
-    needs: [merge_pull_request, build]
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
+    - name: Build Cocos2D WebGL project
+      run: cocos compile -p web
 
-      - name: Delete Build Artifacts Branch
-        env:
-          GITHUB_TOKEN: ${{ secrets.G_TOKEN }}
-        run: | 
-          git push origin --delete build-artifacts
+    - name: Upload built files
+      uses: actions/upload-artifact@v2
+      with:
+        name: webgl-build
+        path: build/web

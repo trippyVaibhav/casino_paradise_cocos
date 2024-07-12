@@ -23,7 +23,6 @@ jobs:
         run: |
           choco install cmake --version 3.21.2
           choco install git
-          choco install python --version 2.7
 
       - name: Install Python Packages
         run: |
@@ -48,7 +47,7 @@ jobs:
           git checkout v4
           git submodule update --init
           git submodule update
-          python download-deps.py
+          ./download-deps.py
           cd $env:USERPROFILE\cocos2d-x\tests\cpp-tests
           mkdir win32-build
           cd win32-build

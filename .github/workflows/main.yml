@@ -44,6 +44,8 @@ jobs:
           npm install
           cd cocos2d-console
           pyinstaller ./toexec/build_console.py
+          cd toexec
+          ls
           cocos -v
           
     - name: Upload built files

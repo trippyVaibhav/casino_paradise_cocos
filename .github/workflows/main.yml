@@ -36,7 +36,7 @@ jobs:
           cd $env:USERPROFILE\cocos2d-x
           git checkout v4
           ./download-deps.py
-          python ./setup.py
+          python2 ./setup.py
           cd $env:USERPROFILE\cocos2d-x\tests\cpp-tests
           mkdir win32-build
           cmake ../..

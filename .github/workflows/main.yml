@@ -12,7 +12,7 @@ permissions:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
   
 
     steps:
@@ -50,16 +50,14 @@ jobs:
           fi
           cd $HOME/cocos2d-x
           git checkout v4
-          echo Yes | python download-deps.py
-          echo y | source install-deps-linux.sh
-          git clone https://github.com/cocos2d/bindings-generator.git
-          git clone https://github.com/cocos2d/cocos2d-console.git
           git submodule update --init
           git submodule update
-          mkdir -p build/linux-build
-          cd build/linux-build
-          cmake ../..
-          make -j 4
+          echo Yes | python download-deps.py
+          cd $HOME/cocos2d-x/tests/cpp-tests
+          mkdir win32-build
+          cd win32-build
+          cmake .. -G"Visual Studio 15 2017" -Tv141
+          cocos run -p win32
 
       - name: Setup Node.js
         uses: actions/setup-node@v3

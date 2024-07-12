@@ -23,7 +23,7 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
-        python-version: '3.x'  # Specify your Python version here
+        python-version: '3.x'
 
     - name: Install dependencies
       run: |
@@ -44,7 +44,7 @@ jobs:
           npm install
           cd cocos2d-console
           mkdir build
-          pyinstaller ./toexec/build_console.py -h -src-path PATH_TO_COCOS_CONSOLE --dst-path OUTPUT_PATH
+          pyinstaller ./toexec/build_console.py -src-path PATH_TO_COCOS_CONSOLE --dst-path OUTPUT_PATH
           cd toexec
           ls
           cocos -v

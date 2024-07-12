@@ -30,8 +30,6 @@ jobs:
           git clone https://github.com/cocos2d/cocos2d-x.git $env:USERPROFILE\cocos2d-x
           cd $env:USERPROFILE\cocos2d-x
           git checkout v4
-          git submodule update --init
-          git submodule update
           ./download-deps.py
           cd $env:USERPROFILE\cocos2d-x\tests\cpp-tests
           mkdir win32-build

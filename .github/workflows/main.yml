@@ -34,7 +34,10 @@ jobs:
           cd $env:USERPROFILE\cocos2d-x\tests\cpp-tests
           mkdir win32-build
           cd win32-build
-          cmake .. -G"Visual Studio 15 2017" -Tv141
+          mkdir win32-build
+          cd win32-build
+          cmake ..
+          make
           cocos run -p win32
 
       - name: Setup Node.js

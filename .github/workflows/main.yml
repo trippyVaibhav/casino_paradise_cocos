@@ -13,27 +13,23 @@ permissions:
 jobs:
   build:
     runs-on: windows-latest
-  
-
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
         with:
           ref: dev
-          
+
       - name: Install Dependencies
         run: |
-           sudo apt-get update
-           sudo apt-get upgrade
-           sudo apt-get install -y build-essential cmake git
-     
-      - name: Install Python 
+          choco install cmake --version 3.21.2
+          choco install git
+          choco install python --version 2.7
+
+      - name: Install Python Packages
         run: |
-          sudo apt-get update
-          sudo apt-get install python2-minimal git curl g++ libgdk-pixbuf2.0-dev cmake libx11-dev libxmu-dev libglu1-mesa-dev libgl2ps-dev libxi-dev libzip-dev libpng-dev libcurl4-gnutls-dev libfontconfig1-dev libsqlite3-dev libglew-dev libssl-dev libgtk-3-dev libglfw3 libglfw3-dev xorg-dev
-          curl https://bootstrap.pypa.io/pip/2.7/get-pip.py --output get-pip.py
-          sudo python2 get-pip.py
-          
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt  # If you have a requirements.txt for Python dependencies
+
       - name: Cache Cocos2d-x Repository
         id: cache-cocos2d-x
         uses: actions/cache@v3
@@ -45,15 +41,15 @@ jobs:
 
       - name: Setup Cocos2d-x
         run: |
-          if [ ! -d "$HOME/cocos2d-x" ]; then
-            git clone https://github.com/cocos2d/cocos2d-x.git $HOME/cocos2d-x
-          fi
-          cd $HOME/cocos2d-x
+          if (-not (Test-Path "$env:USERPROFILE\cocos2d-x")) {
+            git clone https://github.com/cocos2d/cocos2d-x.git $env:USERPROFILE\cocos2d-x
+          }
+          cd $env:USERPROFILE\cocos2d-x
           git checkout v4
           git submodule update --init
           git submodule update
-          echo Yes | python download-deps.py
-          cd $HOME/cocos2d-x/tests/cpp-tests
+          python download-deps.py
+          cd $env:USERPROFILE\cocos2d-x\tests\cpp-tests
           mkdir win32-build
           cd win32-build
           cmake .. -G"Visual Studio 15 2017" -Tv141
@@ -105,7 +101,7 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: artifact
-        
+
       - name: List Downloaded Artifacts
         run: ls -l
   

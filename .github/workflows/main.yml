@@ -41,15 +41,11 @@ jobs:
       run: |
           git clone https://github.com/cocos2d/cocos2d-console.git
           ls
+          npm install
           cd cocos2d-console
           pyinstaller ./toexec/build_console.py
-
-    - name: Install dependencies
-      run: npm install
-
-    - name: Build Cocos2D WebGL project
-      run: cocos compile -p web
-
+          cocos -v
+          
     - name: Upload built files
       uses: actions/upload-artifact@v2
       with:

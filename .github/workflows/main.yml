@@ -44,7 +44,8 @@ jobs:
           npm install
           cd cocos2d-console
           mkdir build
-          python -m PyInstaller --onefile toexec/build_console.py --src-path . --dst-path build/
+          pyinstaller ./toexec/build_console.py 
+          ls
           cd toexec
           ls
           cocos -v

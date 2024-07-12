@@ -43,10 +43,14 @@ jobs:
           ls
           npm install
           cd cocos2d-console
-          pyinstaller ./toexec/build_console.py
+          mkdir build
+          pyinstaller ./toexec/build_console.py -h -src-path PATH_TO_COCOS_CONSOLE --dst-path OUTPUT_PATH
           cd toexec
           ls
           cocos -v
+      env:
+        PATH_TO_COCOS_CONSOLE: 'cd cocos2d-console'
+        OUTPUT_PATH: 'cd cocos2d-console/build'
           
     - name: Upload built files
       uses: actions/upload-artifact@v2

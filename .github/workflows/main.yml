@@ -28,7 +28,6 @@ jobs:
       uses: miggene/cocos-build@v1.2.3
       with:
         cocos_version: 2.4.7
-        project_path: ./assets
      
         
           

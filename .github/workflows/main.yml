@@ -12,7 +12,7 @@ permissions:
 
 jobs:
   build:
-    runs-on: macos-latest
+    runs-on: windows-latest
     
     steps:
     - name: Checkout Repository
@@ -27,8 +27,7 @@ jobs:
     - name : BuildCocos
       uses: miggene/cocos-build@v1.2.3
       with:
-        cocos_version: 2.4.5
-        project_path: ./assets
+        cocos_version: 2.4.7
      
         
           
@@ -36,7 +35,7 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: webgl-build
-        path: build/web
+        path: ./build
 
     
 

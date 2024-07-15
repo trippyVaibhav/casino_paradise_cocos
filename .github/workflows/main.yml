@@ -19,6 +19,7 @@ jobs:
       uses: actions/checkout@v4
       with:
         ref: dev
+        run : npm install
 
     - name : BuildCocos
       uses: miggene/cocos-build@v1.2.3

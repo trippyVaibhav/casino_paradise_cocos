@@ -1,0 +1,24 @@
+{
+    "project": {
+        "name": "casino_paradise_cocos",
+        "version": "2.4.7",
+        "author": "Your Name"
+    },
+    "build": {
+        "outputPath": "./build",
+        "platforms": [
+            "web-mobile"
+        ],
+        "web-mobile": {
+            "minify": true,
+            "sourcemaps": false,
+            "optimizeForMobile": true,
+            "responsive": true
+        }
+    },
+    "resources": {
+        "paths": [
+            "./assets"
+        ]
+    }
+}

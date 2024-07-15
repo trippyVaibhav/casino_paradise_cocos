@@ -123,7 +123,7 @@ window.boot = function () {
 if (window.jsb) {
     var isRuntime = (typeof loadRuntime === 'function');
     if (isRuntime) {
-        require('src/settings.f15ac.js');
+        require('src/settings.js');
         require('src/cocos2d-runtime.js');
         if (CC_PHYSICS_BUILTIN || CC_PHYSICS_CANNON) {
             require('src/physics.js');
@@ -131,7 +131,7 @@ if (window.jsb) {
         require('jsb-adapter/engine/index.js');
     }
     else {
-        require('src/settings.f15ac.js');
+        require('src/settings.js');
         require('src/cocos2d-jsb.js');
         if (CC_PHYSICS_BUILTIN || CC_PHYSICS_CANNON) {
             require('src/physics.js');
@@ -141,15 +141,4 @@ if (window.jsb) {
 
     cc.macro.CLEANUP_IMAGE_CACHE = true;
     window.boot();
-}
-
-function onResize() {
-    console.log("check this function");
-    var defaultHeight, defaultWidth;
-    defaultWidth = 1080;
-    defaultHeight = 608;
-    var width = window.outerWidth;
-    var height = window.outerHeight;
-    // // console.log("RESIZE IS 9", width, height, width/height);
-    resizeWin(defaultWidth, defaultHeight);
 }
